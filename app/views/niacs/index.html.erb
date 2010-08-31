@@ -1,0 +1,25 @@
+<h1>Listing niacs</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @niacs.each do |niac| %>
+  <tr>
+    <td><%= niac.company_id %></td>
+    <td><%= niac.value %></td>
+    <td><%= link_to 'Show', niac %></td>
+    <td><%= link_to 'Edit', edit_niac_path(niac) %></td>
+    <td><%= link_to 'Destroy', niac, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Niac', new_niac_path %>

@@ -1,0 +1,24 @@
+<%= form_for(@income_after_tax) do |f| %>
+  <% if @income_after_tax.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@income_after_tax.errors.count, "error") %> prohibited this income_after_tax from being saved:</h2>
+    <ul>
+    <% @income_after_tax.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

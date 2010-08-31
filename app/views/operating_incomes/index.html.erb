@@ -1,0 +1,25 @@
+<h1>Listing operating_incomes</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @operating_incomes.each do |operating_income| %>
+  <tr>
+    <td><%= operating_income.company_id %></td>
+    <td><%= operating_income.value %></td>
+    <td><%= link_to 'Show', operating_income %></td>
+    <td><%= link_to 'Edit', edit_operating_income_path(operating_income) %></td>
+    <td><%= link_to 'Destroy', operating_income, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Operating income', new_operating_income_path %>

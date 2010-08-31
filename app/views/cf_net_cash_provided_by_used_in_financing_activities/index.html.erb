@@ -1,0 +1,29 @@
+<h1>Listing cf_net_cash_provided_by_used_in_financing_activities</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cf_net_cash_provided_by_used_in_financing_activities.each do |cf_net_cash_provided_by_used_in_financing_activity| %>
+  <tr>
+    <td><%= cf_net_cash_provided_by_used_in_financing_activity.company_id %></td>
+    <td><%= cf_net_cash_provided_by_used_in_financing_activity.value %></td>
+    <td><%= cf_net_cash_provided_by_used_in_financing_activity.start_date %></td>
+    <td><%= cf_net_cash_provided_by_used_in_financing_activity.end_date %></td>
+    <td><%= link_to 'Show', cf_net_cash_provided_by_used_in_financing_activity %></td>
+    <td><%= link_to 'Edit', edit_cf_net_cash_provided_by_used_in_financing_activity_path(cf_net_cash_provided_by_used_in_financing_activity) %></td>
+    <td><%= link_to 'Destroy', cf_net_cash_provided_by_used_in_financing_activity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cf net cash provided by used in financing activity', new_cf_net_cash_provided_by_used_in_financing_activity_path %>

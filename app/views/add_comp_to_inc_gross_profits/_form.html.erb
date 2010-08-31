@@ -1,0 +1,20 @@
+<%= form_for(@add_comp_to_inc_gross_profit) do |f| %>
+  <% if @add_comp_to_inc_gross_profit.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@add_comp_to_inc_gross_profit.errors.count, "error") %> prohibited this add_comp_to_inc_gross_profit from being saved:</h2>
+    <ul>
+    <% @add_comp_to_inc_gross_profit.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

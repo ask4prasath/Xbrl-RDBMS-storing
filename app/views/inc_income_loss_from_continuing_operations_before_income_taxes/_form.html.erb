@@ -1,0 +1,28 @@
+<%= form_for(@inc_income_loss_from_continuing_operations_before_income_taxis) do |f| %>
+  <% if @inc_income_loss_from_continuing_operations_before_income_taxis.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@inc_income_loss_from_continuing_operations_before_income_taxis.errors.count, "error") %> prohibited this inc_income_loss_from_continuing_operations_before_income_taxis from being saved:</h2>
+    <ul>
+    <% @inc_income_loss_from_continuing_operations_before_income_taxis.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

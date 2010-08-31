@@ -1,0 +1,27 @@
+<h1>Listing inc_income_loss_from_continuing_operations_before_income_taxes</h1>
+
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inc_income_loss_from_continuing_operations_before_income_taxes.each do |inc_income_loss_from_continuing_operations_before_income_taxis| %>
+  <tr>
+    <td><%= inc_income_loss_from_continuing_operations_before_income_taxis.value %></td>
+    <td><%= inc_income_loss_from_continuing_operations_before_income_taxis.start_date %></td>
+    <td><%= inc_income_loss_from_continuing_operations_before_income_taxis.end_date %></td>
+    <td><%= link_to 'Show', inc_income_loss_from_continuing_operations_before_income_taxis %></td>
+    <td><%= link_to 'Edit', edit_inc_income_loss_from_continuing_operations_before_income_taxis_path(inc_income_loss_from_continuing_operations_before_income_taxis) %></td>
+    <td><%= link_to 'Destroy', inc_income_loss_from_continuing_operations_before_income_taxis, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inc income loss from continuing operations before income taxis', new_inc_income_loss_from_continuing_operations_before_income_taxis_path %>

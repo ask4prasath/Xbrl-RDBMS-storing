@@ -1,0 +1,29 @@
+<h1>Listing bal_long_term_debt_noncurrents</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bal_long_term_debt_noncurrents.each do |bal_long_term_debt_noncurrent| %>
+  <tr>
+    <td><%= bal_long_term_debt_noncurrent.company_id %></td>
+    <td><%= bal_long_term_debt_noncurrent.value %></td>
+    <td><%= bal_long_term_debt_noncurrent.start_date %></td>
+    <td><%= bal_long_term_debt_noncurrent.end_date %></td>
+    <td><%= link_to 'Show', bal_long_term_debt_noncurrent %></td>
+    <td><%= link_to 'Edit', edit_bal_long_term_debt_noncurrent_path(bal_long_term_debt_noncurrent) %></td>
+    <td><%= link_to 'Destroy', bal_long_term_debt_noncurrent, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bal long term debt noncurrent', new_bal_long_term_debt_noncurrent_path %>

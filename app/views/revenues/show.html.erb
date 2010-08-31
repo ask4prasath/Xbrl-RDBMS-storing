@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @revenue.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @revenue.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_revenue_path(@revenue) %> |
+<%= link_to 'Back', revenues_path %>

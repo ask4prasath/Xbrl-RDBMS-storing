@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @operating_income.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @operating_income.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_operating_income_path(@operating_income) %> |
+<%= link_to 'Back', operating_incomes_path %>

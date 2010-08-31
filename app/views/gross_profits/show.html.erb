@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @gross_profit.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @gross_profit.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_gross_profit_path(@gross_profit) %> |
+<%= link_to 'Back', gross_profits_path %>

@@ -1,0 +1,29 @@
+<h1>Listing cf_cash_and_cash_equivalents_period_increase_decreases</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cf_cash_and_cash_equivalents_period_increase_decreases.each do |cf_cash_and_cash_equivalents_period_increase_decrease| %>
+  <tr>
+    <td><%= cf_cash_and_cash_equivalents_period_increase_decrease.company_id %></td>
+    <td><%= cf_cash_and_cash_equivalents_period_increase_decrease.value %></td>
+    <td><%= cf_cash_and_cash_equivalents_period_increase_decrease.start_date %></td>
+    <td><%= cf_cash_and_cash_equivalents_period_increase_decrease.end_date %></td>
+    <td><%= link_to 'Show', cf_cash_and_cash_equivalents_period_increase_decrease %></td>
+    <td><%= link_to 'Edit', edit_cf_cash_and_cash_equivalents_period_increase_decrease_path(cf_cash_and_cash_equivalents_period_increase_decrease) %></td>
+    <td><%= link_to 'Destroy', cf_cash_and_cash_equivalents_period_increase_decrease, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cf cash and cash equivalents period increase decrease', new_cf_cash_and_cash_equivalents_period_increase_decrease_path %>

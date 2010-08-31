@@ -1,0 +1,29 @@
+<h1>Listing bal_other_assets_currents</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bal_other_assets_currents.each do |bal_other_assets_current| %>
+  <tr>
+    <td><%= bal_other_assets_current.company_id %></td>
+    <td><%= bal_other_assets_current.value %></td>
+    <td><%= bal_other_assets_current.start_date %></td>
+    <td><%= bal_other_assets_current.end_date %></td>
+    <td><%= link_to 'Show', bal_other_assets_current %></td>
+    <td><%= link_to 'Edit', edit_bal_other_assets_current_path(bal_other_assets_current) %></td>
+    <td><%= link_to 'Destroy', bal_other_assets_current, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bal other assets current', new_bal_other_assets_current_path %>

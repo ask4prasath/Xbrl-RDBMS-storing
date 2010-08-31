@@ -1,0 +1,43 @@
+<% form_for :search, :url => {:action => "submit"} do |f| %>
+   <% select_value =  {"Income Before Tax" => "inc_net_income_before_extra_items",
+  "GrossProfit" => "inc_gross_profits",
+  "SalesRevenueNet" => "inc_sales_revenue_nets",
+  "Long term Debt" => "bal_long_term_debt_noncurrents",
+  "NetIncomeLoss" => "inc_net_income_losses",
+  "NetIncomeBeforeExtraItem" => "inc_net_income_before_extra_items",
+  "NetIncome" => "inc_net_incomes",
+  "Current Liabilities" => "bal_liabilities_currents",
+  "Other Asset" => "bal_other_assets_currents",
+  "Operating Income" => "inc_net_income_losses",
+  "LiabilitiesAndStockholdersEquity" => "bal_liabilities_and_stockholders_equities",
+  "CashAndCashEquivalentsPeriodIncreaseDecrease" => "cf_cash_and_cash_equivalents_period_increase_decreases",
+  "Stock holders Equity" => "bal_stockholders_equities",
+  "Asset" => "bal_assets",
+  "NetCash Provided By Used In Operating Activity" => "cf_net_cash_provided_by_used_in_operating_activities",
+  "NetCash Provided By Used In Investing Activity" => "cf_net_cash_provided_by_used_in_investing_activities",
+  "NetCash Provided By Used In Financing Activity" => "cf_net_cash_provided_by_used_in_financing_activities",
+  "CashAndCashEquivalentsPeriodIncreaseDecrease" => "cf_cash_and_cash_equivalents_period_increase_decreases",
+   "Sample" => "Sample"
+  }%>
+    Search Companies With <br />
+
+    <%= f.select("name1",  select_value, {:prompt => 'Select Item Name'}) %>
+     <%= f.select("query1",  {"Greater Than" => ">", "Lesser Than" => "<",
+                         "Equal To" => "="}, {:prompt => 'Select Range'}) %>
+     <%= f.text_field "value1" %>  & <br />
+    <%= f.select("name2",  select_value, {:prompt => 'Select Item Name'}) %>
+    <%= f.select("query2",  {"Greater Than" => ">", "Lesser Than" => "<",
+                         "Equal To" => "="}, {:prompt => 'Select Range'}) %>
+     <%= f.text_field "value2" %>  & <br />
+    <%= f.select("name3",  select_value, {:prompt => 'Select Item Name'}) %>
+    <%= f.select("query3",  {"Greater Than" => ">", "Lesser Than" => "<",
+                         "Equal To" => "="}, {:prompt => 'Select Range'}) %>
+     <%= f.text_field :value3 %>   & <br />
+    <%= f.submit "submit" %>
+   <% end  %>
+
+
+
+
+
+

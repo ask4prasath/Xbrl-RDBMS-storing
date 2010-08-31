@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @niat.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @niat.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_niat_path(@niat) %> |
+<%= link_to 'Back', niats_path %>

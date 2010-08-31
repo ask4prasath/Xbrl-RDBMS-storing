@@ -1,0 +1,24 @@
+<%= form_for(@iaciei) do |f| %>
+  <% if @iaciei.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@iaciei.errors.count, "error") %> prohibited this iaciei from being saved:</h2>
+    <ul>
+    <% @iaciei.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Listing bal_liabilities_and_stockholders_equities</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bal_liabilities_and_stockholders_equities.each do |bal_liabilities_and_stockholders_equity| %>
+  <tr>
+    <td><%= bal_liabilities_and_stockholders_equity.company_id %></td>
+    <td><%= bal_liabilities_and_stockholders_equity.value %></td>
+    <td><%= bal_liabilities_and_stockholders_equity.start_date %></td>
+    <td><%= bal_liabilities_and_stockholders_equity.end_date %></td>
+    <td><%= link_to 'Show', bal_liabilities_and_stockholders_equity %></td>
+    <td><%= link_to 'Edit', edit_bal_liabilities_and_stockholders_equity_path(bal_liabilities_and_stockholders_equity) %></td>
+    <td><%= link_to 'Destroy', bal_liabilities_and_stockholders_equity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bal liabilities and stockholders equity', new_bal_liabilities_and_stockholders_equity_path %>

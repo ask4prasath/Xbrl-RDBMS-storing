@@ -1,0 +1,25 @@
+<h1>Listing nibeis</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nibeis.each do |nibei| %>
+  <tr>
+    <td><%= nibei.company_id %></td>
+    <td><%= nibei.value %></td>
+    <td><%= link_to 'Show', nibei %></td>
+    <td><%= link_to 'Edit', edit_nibei_path(nibei) %></td>
+    <td><%= link_to 'Destroy', nibei, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nibei', new_nibei_path %>

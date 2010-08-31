@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @income_after_tax.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @income_after_tax.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_income_after_tax_path(@income_after_tax) %> |
+<%= link_to 'Back', income_after_taxes_path %>

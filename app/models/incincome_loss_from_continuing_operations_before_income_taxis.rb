@@ -1,0 +1,2 @@
+class IncincomeLossFromContinuingOperationsBeforeIncomeTaxis < ActiveRecord::Base
+end

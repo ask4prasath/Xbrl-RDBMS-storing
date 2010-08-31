@@ -1,0 +1,25 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @bal_stockholders_equity.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @bal_stockholders_equity.value %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @bal_stockholders_equity.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @bal_stockholders_equity.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_bal_stockholders_equity_path(@bal_stockholders_equity) %> |
+<%= link_to 'Back', bal_stockholders_equities_path %>

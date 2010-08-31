@@ -1,0 +1,29 @@
+<h1>Listing net_income_before_extra_items</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @net_income_before_extra_items.each do |net_income_before_extra_item| %>
+  <tr>
+    <td><%= net_income_before_extra_item.company_id %></td>
+    <td><%= net_income_before_extra_item.value %></td>
+    <td><%= net_income_before_extra_item.start_date %></td>
+    <td><%= net_income_before_extra_item.end_date %></td>
+    <td><%= link_to 'Show', net_income_before_extra_item %></td>
+    <td><%= link_to 'Edit', edit_net_income_before_extra_item_path(net_income_before_extra_item) %></td>
+    <td><%= link_to 'Destroy', net_income_before_extra_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Net income before extra item', new_net_income_before_extra_item_path %>

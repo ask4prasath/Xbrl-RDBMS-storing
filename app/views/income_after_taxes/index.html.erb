@@ -1,0 +1,22 @@
+<h1>Listing income_after_taxes</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @income_after_taxes.each do |income_after_tax| %>
+  <tr>
+    <td><%= income_after_tax.company_id %></td>
+    <td><%= income_after_tax.value %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br />
+

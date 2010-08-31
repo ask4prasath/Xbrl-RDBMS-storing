@@ -1,0 +1,32 @@
+<%= form_for(@bal_asset) do |f| %>
+  <% if @bal_asset.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@bal_asset.errors.count, "error") %> prohibited this bal_asset from being saved:</h2>
+    <ul>
+    <% @bal_asset.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

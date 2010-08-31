@@ -1,0 +1,25 @@
+<h1>Listing gross_profits</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gross_profits.each do |gross_profit| %>
+  <tr>
+    <td><%= gross_profit.company_id %></td>
+    <td><%= gross_profit.value %></td>
+    <td><%= link_to 'Show', gross_profit %></td>
+    <td><%= link_to 'Edit', edit_gross_profit_path(gross_profit) %></td>
+    <td><%= link_to 'Destroy', gross_profit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gross profit', new_gross_profit_path %>

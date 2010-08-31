@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @nibt.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @nibt.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_nibt_path(@nibt) %> |
+<%= link_to 'Back', nibts_path %>

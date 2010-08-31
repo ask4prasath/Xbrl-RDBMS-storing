@@ -1,0 +1,25 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @bal_long_term_debt_noncurrent.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @bal_long_term_debt_noncurrent.value %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @bal_long_term_debt_noncurrent.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @bal_long_term_debt_noncurrent.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_bal_long_term_debt_noncurrent_path(@bal_long_term_debt_noncurrent) %> |
+<%= link_to 'Back', bal_long_term_debt_noncurrents_path %>

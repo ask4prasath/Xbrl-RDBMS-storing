@@ -1,0 +1,25 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @inc_net_income_before_extra_item.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @inc_net_income_before_extra_item.value %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @inc_net_income_before_extra_item.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @inc_net_income_before_extra_item.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_inc_net_income_before_extra_item_path(@inc_net_income_before_extra_item) %> |
+<%= link_to 'Back', inc_net_income_before_extra_items_path %>

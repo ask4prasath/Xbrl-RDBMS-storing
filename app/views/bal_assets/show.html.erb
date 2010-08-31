@@ -1,0 +1,25 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @bal_asset.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @bal_asset.value %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @bal_asset.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @bal_asset.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_bal_asset_path(@bal_asset) %> |
+<%= link_to 'Back', bal_assets_path %>

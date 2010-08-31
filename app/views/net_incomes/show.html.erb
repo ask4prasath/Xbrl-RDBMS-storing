@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @net_income.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @net_income.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_net_income_path(@net_income) %> |
+<%= link_to 'Back', net_incomes_path %>

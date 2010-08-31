@@ -1,0 +1,23 @@
+<h1>Listing add_comp_to_inc_gross_profits</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @add_comp_to_inc_gross_profits.each do |add_comp_to_inc_gross_profit| %>
+  <tr>
+    <td><%= add_comp_to_inc_gross_profit.company_id %></td>
+    <td><%= link_to 'Show', add_comp_to_inc_gross_profit %></td>
+    <td><%= link_to 'Edit', edit_add_comp_to_inc_gross_profit_path(add_comp_to_inc_gross_profit) %></td>
+    <td><%= link_to 'Destroy', add_comp_to_inc_gross_profit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Add comp to inc gross profit', new_add_comp_to_inc_gross_profit_path %>

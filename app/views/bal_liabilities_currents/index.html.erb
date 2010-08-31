@@ -1,0 +1,29 @@
+<h1>Listing bal_liabilities_currents</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bal_liabilities_currents.each do |bal_liabilities_current| %>
+  <tr>
+    <td><%= bal_liabilities_current.company_id %></td>
+    <td><%= bal_liabilities_current.value %></td>
+    <td><%= bal_liabilities_current.start_date %></td>
+    <td><%= bal_liabilities_current.end_date %></td>
+    <td><%= link_to 'Show', bal_liabilities_current %></td>
+    <td><%= link_to 'Edit', edit_bal_liabilities_current_path(bal_liabilities_current) %></td>
+    <td><%= link_to 'Destroy', bal_liabilities_current, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bal liabilities current', new_bal_liabilities_current_path %>

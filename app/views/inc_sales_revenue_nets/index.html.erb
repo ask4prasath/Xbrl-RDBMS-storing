@@ -1,0 +1,27 @@
+<h1>Listing inc_sales_revenue_nets</h1>
+
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inc_sales_revenue_nets.each do |inc_sales_revenue_net| %>
+  <tr>
+    <td><%= inc_sales_revenue_net.value %></td>
+    <td><%= inc_sales_revenue_net.start_date %></td>
+    <td><%= inc_sales_revenue_net.end_date %></td>
+    <td><%= link_to 'Show', inc_sales_revenue_net %></td>
+    <td><%= link_to 'Edit', edit_inc_sales_revenue_net_path(inc_sales_revenue_net) %></td>
+    <td><%= link_to 'Destroy', inc_sales_revenue_net, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inc sales revenue net', new_inc_sales_revenue_net_path %>

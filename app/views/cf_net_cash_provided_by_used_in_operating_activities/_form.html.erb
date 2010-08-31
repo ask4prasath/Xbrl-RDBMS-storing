@@ -1,0 +1,32 @@
+<%= form_for(@cf_net_cash_provided_by_used_in_operating_activity) do |f| %>
+  <% if @cf_net_cash_provided_by_used_in_operating_activity.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@cf_net_cash_provided_by_used_in_operating_activity.errors.count, "error") %> prohibited this cf_net_cash_provided_by_used_in_operating_activity from being saved:</h2>
+    <ul>
+    <% @cf_net_cash_provided_by_used_in_operating_activity.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

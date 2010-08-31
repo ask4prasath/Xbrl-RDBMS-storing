@@ -1,0 +1,34 @@
+<h1>Load#submit</h1>
+
+<i>Results in <%= @execution_time %>  sec  <br /></i>
+
+No of Companies: <%= @companies.size %> <br />
+No of companies on First Search: <%= @a.size %> <br />
+No of companies on Second Search: <%= @b.size %>  <br />
+No of companies on Third Search: <%= @c.size %>   <br />    
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th><%= raw @value[:search1].join("<br />")  %><br />       </th>
+     <th><%= raw @value[:search2].join("<br />")  %><br />    </th>
+     <th><%= raw @value[:search3].join("<br />")  %><br />      </th>
+  </tr>
+  <tr>
+    <% @companies_name.each do |f| %>
+    <td><%= f.name %></td>
+      <td> <%= raw @a_value[f.id.to_s].join("<br />") %></td>
+     <td> <%= raw @b_value[f.id.to_s].join("<br />") %></td>
+    <td> <%= raw @c_value[f.id.to_s].join("<br />") %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+
+
+
+
+
+

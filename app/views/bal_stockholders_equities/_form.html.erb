@@ -1,0 +1,32 @@
+<%= form_for(@bal_stockholders_equity) do |f| %>
+  <% if @bal_stockholders_equity.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@bal_stockholders_equity.errors.count, "error") %> prohibited this bal_stockholders_equity from being saved:</h2>
+    <ul>
+    <% @bal_stockholders_equity.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

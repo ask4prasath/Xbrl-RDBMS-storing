@@ -1,0 +1,27 @@
+<h1>Listing inc_operating_income_losses</h1>
+
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inc_operating_income_losses.each do |inc_operating_income_loss| %>
+  <tr>
+    <td><%= inc_operating_income_loss.value %></td>
+    <td><%= inc_operating_income_loss.start_date %></td>
+    <td><%= inc_operating_income_loss.end_date %></td>
+    <td><%= link_to 'Show', inc_operating_income_loss %></td>
+    <td><%= link_to 'Edit', edit_inc_operating_income_loss_path(inc_operating_income_loss) %></td>
+    <td><%= link_to 'Destroy', inc_operating_income_loss, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inc operating income loss', new_inc_operating_income_loss_path %>

@@ -1,0 +1,25 @@
+<h1>Listing niats</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @niats.each do |niat| %>
+  <tr>
+    <td><%= niat.company_id %></td>
+    <td><%= niat.value %></td>
+    <td><%= link_to 'Show', niat %></td>
+    <td><%= link_to 'Edit', edit_niat_path(niat) %></td>
+    <td><%= link_to 'Destroy', niat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Niat', new_niat_path %>

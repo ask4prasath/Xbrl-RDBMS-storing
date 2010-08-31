@@ -1,0 +1,29 @@
+<h1>Listing inc_net_incomes</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Value</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inc_net_incomes.each do |inc_net_income| %>
+  <tr>
+    <td><%= inc_net_income.company_id %></td>
+    <td><%= inc_net_income.value %></td>
+    <td><%= inc_net_income.start_date %></td>
+    <td><%= inc_net_income.end_date %></td>
+    <td><%= link_to 'Show', inc_net_income %></td>
+    <td><%= link_to 'Edit', edit_inc_net_income_path(inc_net_income) %></td>
+    <td><%= link_to 'Destroy', inc_net_income, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inc net income', new_inc_net_income_path %>

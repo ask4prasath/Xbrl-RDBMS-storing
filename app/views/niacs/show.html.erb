@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @niac.company_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @niac.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_niac_path(@niac) %> |
+<%= link_to 'Back', niacs_path %>

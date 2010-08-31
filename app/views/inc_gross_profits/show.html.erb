@@ -1,0 +1,20 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Value:</b>
+  <%= @inc_gross_profit.value %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @inc_gross_profit.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @inc_gross_profit.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_inc_gross_profit_path(@inc_gross_profit) %> |
+<%= link_to 'Back', inc_gross_profits_path %>
