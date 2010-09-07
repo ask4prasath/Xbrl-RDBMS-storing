@@ -1,0 +1,23 @@
+<h1>Listing sample3s</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sample3s.each do |sample3| %>
+  <tr>
+    <td><%= sample3.name %></td>
+    <td><%= link_to 'Show', sample3 %></td>
+    <td><%= link_to 'Edit', edit_sample3_path(sample3) %></td>
+    <td><%= link_to 'Destroy', sample3, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sample3', new_sample3_path %>

@@ -8,8 +8,4 @@
 #   inflect.irregular 'person', 'people'
 #   inflect.uncountable %w( fish sheep )
 # end
-require 'cached_model'
 
-require "xbrlware"
-require 'mysql'
-require 'ostruct'
